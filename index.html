@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaavoN</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#111" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: #eee;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #33ffaa;
+    }
+    textarea {
+      width: 80%;
+      height: 150px;
+      background: #222;
+      color: #fff;
+      border: 1px solid #444;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 1rem;
+      resize: none;
+    }
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.8rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>NovaavoN</h1>
+  <textarea placeholder="در این‌جا بنویس... بی‌شتاب، با تامل."></textarea>
+  <footer>Powered by you & /nava</footer>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('Service Worker registered.', reg));
+    }
+  </script>
+</body>
+</html>
